@@ -2,16 +2,27 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>Periodic Table of Elements</title>
-  <meta name="description" content="Interactive Periodic Table of Elements">
-  <meta name="author" content="Dave Berning">
+    <title>Periodic Table of Elements</title>
+    <meta name="description" content="Interactive Periodic Table of Elements">
+    <meta name="author" content="Dave Berning">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
 </head>
 
-<body>
-  <script src="js/scripts.js"></script>
+<body ng-app="periodicTableOfElements">
+    <div ng-module="test" ng-controller="HelloController">
+        <h1>Periodic Table Of Elements</h1>
+        <h2>Isn't {{subject}} great! I'm trying to learn AngularJS and making it more interesting!</h2>
+        <p ng-controller="webtest">{{webtest.table.elements.name}}</p>
+    </div>
 </body>
+<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="assets/bower_components/angular/angular.js"></script>
+<script src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="app/app.js"></script>
+<script src="app/components/periodic-table/elements-factory.js"></script>
+<script src="app/components/periodic-table/table-controller.js"></script>
 </html>

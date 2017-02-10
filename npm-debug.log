@@ -1,0 +1,23 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/7.2.1/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install' ]
+2 info using npm@2.15.8
+3 info using node@v7.2.1
+4 verbose config Skipping project config: /Users/dberning/.npmrc. (matches userconfig)
+5 verbose readDependencies loading dependencies from /Users/dberning/package.json
+6 error install Couldn't read dependencies
+7 verbose stack Error: ENOENT: no such file or directory, open '/Users/dberning/package.json'
+8 verbose cwd /Users/dberning/Documents/Documents - David’s MacBook Pro/GitHub/periodic-table-angular
+9 error Darwin 16.1.0
+10 error argv "/usr/local/Cellar/node/7.2.1/bin/node" "/usr/local/bin/npm" "install"
+11 error node v7.2.1
+12 error npm  v2.15.8
+13 error path /Users/dberning/package.json
+14 error code ENOPACKAGEJSON
+15 error errno -2
+16 error syscall open
+17 error package.json ENOENT: no such file or directory, open '/Users/dberning/package.json'
+17 error package.json This is most likely not a problem with npm itself.
+17 error package.json npm can't find a package.json file in your current directory.
+18 verbose exit [ -2, true ]
