@@ -1,5 +1,3 @@
-var periodicTable = angular.module("periodicTableOfElements");
-
 periodicTable.factory('webtest', function($q, $timeout, $http) {
     var Webtest = {
         fetch: function(callback) {

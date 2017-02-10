@@ -1,5 +1,3 @@
-var periodicTable = angular.module("periodicTableOfElements");
-
 periodicTable.controller("HelloController", function($scope) {
     $scope.subject = "science";
 });
