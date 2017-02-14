@@ -1,13 +1,11 @@
-periodicTable.factory('webtest', function($q, $timeout, $http) {
-    var Webtest = {
-        fetch: function(callback) {
-            return $timeout(function() {
-                return $http.get('periodic-table.json').then(function(response) {
-                    return response.data;
-                });
-            }, 30);
-        }
-    };
+var periodicTable = angular.module("periodicTableOfElements");
 
-    return Webtest;
+periodicTable.factory('elementsFactory', function($http) {
+  var factory = {};
+
+  factory.getItems = function () {
+   return  $http.get('/app/components/periodic-table/periodic-table.json');
+  };
+
+  return factory;
 });
