@@ -9,16 +9,17 @@
     <meta name="author" content="Dave Berning">
 
     <link rel="stylesheet" href="/assets/bower_components/bootstrap/dist/bootstrap.css">
-    <link rel="stylesheet" href="/css/styles.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=1.0">
 </head>
 
 <body ng-app="periodicTableOfElements">
-    <div ng-module="periodicTableOfElements" ng-controller="subjectController">
-        <h1>Periodic Table Of Elements</h1>
-        <h2>Isn't {{subject}} great! I'm trying to learn AngularJS and making it more interesting!</h2>
+    <div ng-controller="elementNamesController">
+        <div ng-repeat="elementName in elementNames track by $index">
+            <p class="element"><strong>{{elementName.small}}</strong><br>
+            {{elementName.number}}<br>
+            {{elementName.molar}}</p>
+        </div>
     </div>
-    <!-- <p ng-controller="getElements">{{elements.data.table[0].elements[0].name}}</p> -->
-    <p ng-controller="elementNames">{{elementName}}</p>
 </body>
 <script src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/assets/bower_components/angular/angular.js"></script>
