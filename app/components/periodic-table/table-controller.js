@@ -35,16 +35,8 @@ periodicTable.controller('elementNamesController', function($scope, elementsFact
             elementNames.push(elementName);
         }
 
-        for (var i = 0; i < elementNames.length; i++) { // looping through all elements
-            $scope.atomicWeight = Math.round(elementNames[i].molar);
-            $scope.atomicNumber = elementNames[i].number;
-            $scope.neutronsInAtom = $scope.atomicWeight - $scope.atomicNumber;
-            console.log($scope.neutronsInAtom);
-        }
-
         $scope.numberOfPages = elementNames.length;
 
-<<<<<<< HEAD
         for (var i = 0; i < elementNames.length; i++) { // looping through all elements
             $scope.roundedAtomicWeight = Math.round(elementNames[i].molar);
             $scope.atomicNumber = elementNames[i].number;
@@ -53,9 +45,6 @@ periodicTable.controller('elementNamesController', function($scope, elementsFact
         }
 
         $scope.next = function () {
-=======
-        $scope.next = function ($scope) {
->>>>>>> bcfe2349fa1643b3d3b5f7c1d2930f71f2cfe83a
             if ($scope.elementIndex >= $scope.numberOfPages - 1) {
                 $scope.elementIndex = 0;
                 $scope.quarkIndex = 1;
@@ -71,7 +60,7 @@ periodicTable.controller('elementNamesController', function($scope, elementsFact
             console.log(elementNames.length + '/' + $scope.elementIndex);
         };
 
-        $scope.previous = function ($scope) {
+        $scope.previous = function () {
             if ($scope.elementIndex >= $scope.numberOfPages - 1) {
                 $scope.elementIndex = 0;
                 $scope.quarkIndex = 1;
