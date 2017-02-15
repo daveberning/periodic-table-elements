@@ -8,8 +8,8 @@
     <meta name="description" content="Interactive Periodic Table of Elements">
     <meta name="author" content="Dave Berning">
 
-    <link rel="stylesheet" href="/assets/bower_components/bootstrap/dist/bootstrap.css">
-    <link rel="stylesheet" href="/assets/css/styles.css?v=1.0">
+    <link rel="stylesheet" href="/assets/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 
 <body ng-app="periodicTableOfElements" ng-controller="elementNamesController">
@@ -21,7 +21,7 @@
 
             <div class="quark proton" ng-repeat="i in getNumber(number) track by $index"></div>
             <div class="quark electron" ng-repeat="i in getNumber(number) track by $index"></div>
-            
+
             <div ng-repeat="neutron in neutronArray track by $index">
                 <div ng-if="elementIndex == $index">
                     <div class="quark neutron" ng-repeat="i in getNumber(neutron) track by $index"></div>
@@ -38,6 +38,7 @@
     <button ng-click="previous()" ng-disabled="elementIndex <= 0">Previous</button>
     <button ng-click="next()" ng-disabled="elementIndex >= numberOfPages">Next</button>
 </body>
+
 <script src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/assets/bower_components/angular/angular.js"></script>
 <script src="/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
