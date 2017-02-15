@@ -12,20 +12,26 @@
     <link rel="stylesheet" href="/assets/css/styles.css?v=1.0">
 </head>
 
-<body ng-app="periodicTableOfElements">
-    <div ng-controller="elementNamesController">
-        <div ng-repeat="elementName in elementNames track by $index">
-            <div ng-if="elementIndex == $index">
-                <p class="element"><strong>{{elementName.small}}</strong><br>
-                {{elementName.number}}<br>
-                {{elementName.molar}}</p>
-            </div>
+<body ng-app="periodicTableOfElements" ng-controller="elementNamesController">
+    <div ng-repeat="elementName in elementNames track by $index">
+        <div ng-if="elementIndex == $index">
+            <div class="element"><strong>{{elementName.small}}</strong><br>
+            {{elementName.number}}<br>
+            {{elementName.molar}}</div>
+
+            <div class="quark proton" ng-repeat="i in getNumber(number) track by $index"></div>
+            <div class="quark electron" ng-repeat="i in getNumber(number) track by $index"></div>
+            <div class="quark neutron" ng-repeat="i in getNumber(number) track by $index"></div>
+
+            Number of Protons:{{elementName.number}}<br>
+            Number of Electrons: {{elementName.number}}<br>
+            Number of Neutrons: {{elementName.molar - elementName.number | number: 0}}
         </div>
-        {{numberOfPages}}
-        {{elementIndex}}
-        <button ng-click="previous()">Next</button>
-        <button ng-click="next()">Next</button>
     </div>
+    <hr>
+    Total Number of Elements: {{numberOfPages}}
+    <button ng-click="previous()" ng-disabled="elementIndex <= 0">Previous</button>
+    <button ng-click="next()" ng-disabled="elementIndex >= numberOfPages">Next</button>
 </body>
 <script src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/assets/bower_components/angular/angular.js"></script>

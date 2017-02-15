@@ -9,7 +9,9 @@ periodicTable.controller('elementNamesController', function($scope, elementsFact
         var elementNames = [];
 
         $scope.elementNames = elementNames;
+        //$scope.neutronArray = [];
         $scope.elementIndex = 0;
+        $scope.quarkIndex = 1;
 
         for (var i = 0; i < tableLength; i++) { // get elements in tables
             var elementLength = $scope.items.table[i].elements.length;
@@ -35,11 +37,25 @@ periodicTable.controller('elementNamesController', function($scope, elementsFact
 
         $scope.numberOfPages = elementNames.length;
 
+        for (var i = 0; i < elementNames.length; i++) { // looping through all elements
+            $scope.roundedAtomicWeight = Math.round(elementNames[i].molar);
+            $scope.atomicNumber = elementNames[i].number;
+            $scope.neutronsInAtom = $scope.roundedAtomicWeight - $scope.atomicNumber;
+            console.log($scope.neutronsInAtom);
+        }
+
         $scope.next = function () {
             if ($scope.elementIndex >= $scope.numberOfPages - 1) {
                 $scope.elementIndex = 0;
+                $scope.quarkIndex = 1;
             } else {
                 $scope.elementIndex++;
+                $scope.quarkIndex++;
+
+                $scope.number = $scope.quarkIndex;
+                $scope.getNumber = function(num) {
+                    return new Array(num);
+                }
             }
             console.log(elementNames.length + '/' + $scope.elementIndex);
         };
@@ -47,11 +63,23 @@ periodicTable.controller('elementNamesController', function($scope, elementsFact
         $scope.previous = function () {
             if ($scope.elementIndex >= $scope.numberOfPages - 1) {
                 $scope.elementIndex = 0;
+                $scope.quarkIndex = 1;
             } else {
                 $scope.elementIndex--;
+                $scope.quarkIndex--;
+
+                $scope.number = $scope.quarkIndex;
+                $scope.getNumber = function(num) {
+                    return new Array(num);
+                }
             }
             console.log(elementNames.length + '/' + $scope.elementIndex);
         };
+
+        $scope.number = $scope.quarkIndex;
+        $scope.getNumber = function(num) {
+            return new Array(num);
+        }
 
         console.log(elementNames);
     });
