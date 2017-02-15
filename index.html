@@ -15,10 +15,16 @@
 <body ng-app="periodicTableOfElements">
     <div ng-controller="elementNamesController">
         <div ng-repeat="elementName in elementNames track by $index">
-            <p class="element"><strong>{{elementName.small}}</strong><br>
-            {{elementName.number}}<br>
-            {{elementName.molar}}</p>
+            <div ng-if="elementIndex == $index">
+                <p class="element"><strong>{{elementName.small}}</strong><br>
+                {{elementName.number}}<br>
+                {{elementName.molar}}</p>
+            </div>
         </div>
+        {{numberOfPages}}
+        {{elementIndex}}
+        <button ng-click="previous()">Next</button>
+        <button ng-click="next()">Next</button>
     </div>
 </body>
 <script src="/assets/bower_components/jquery/dist/jquery.min.js"></script>

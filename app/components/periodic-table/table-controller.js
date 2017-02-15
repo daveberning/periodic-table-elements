@@ -8,10 +8,8 @@ periodicTable.controller('elementNamesController', function($scope, elementsFact
         var lanthanoidsLength = $scope.items.lanthanoids.length;
         var elementNames = [];
 
-        $scope.itemsPerPage = 5;
-        $scope.currentPage = 0;
         $scope.elementNames = elementNames;
-        console.log($scope.items.table);
+        $scope.elementIndex = 0;
 
         for (var i = 0; i < tableLength; i++) { // get elements in tables
             var elementLength = $scope.items.table[i].elements.length;
@@ -34,6 +32,26 @@ periodicTable.controller('elementNamesController', function($scope, elementsFact
             $scope.elementName = elementName;
             elementNames.push(elementName);
         }
+
+        $scope.numberOfPages = elementNames.length;
+
+        $scope.next = function () {
+            if ($scope.elementIndex >= $scope.numberOfPages - 1) {
+                $scope.elementIndex = 0;
+            } else {
+                $scope.elementIndex++;
+            }
+            console.log(elementNames.length + '/' + $scope.elementIndex);
+        };
+
+        $scope.previous = function () {
+            if ($scope.elementIndex >= $scope.numberOfPages - 1) {
+                $scope.elementIndex = 0;
+            } else {
+                $scope.elementIndex--;
+            }
+            console.log(elementNames.length + '/' + $scope.elementIndex);
+        };
 
         console.log(elementNames);
     });
