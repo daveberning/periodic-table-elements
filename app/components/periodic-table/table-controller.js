@@ -33,9 +33,16 @@ periodicTable.controller('elementNamesController', function($scope, elementsFact
             elementNames.push(elementName);
         }
 
+        for (var i = 0; i < elementNames.length; i++) { // looping through all elements
+            $scope.atomicWeight = Math.round(elementNames[i].molar);
+            $scope.atomicNumber = elementNames[i].number;
+            $scope.neutronsInAtom = $scope.atomicWeight - $scope.atomicNumber;
+            console.log($scope.neutronsInAtom);
+        }
+
         $scope.numberOfPages = elementNames.length;
 
-        $scope.next = function () {
+        $scope.next = function ($scope) {
             if ($scope.elementIndex >= $scope.numberOfPages - 1) {
                 $scope.elementIndex = 0;
             } else {
@@ -44,7 +51,7 @@ periodicTable.controller('elementNamesController', function($scope, elementsFact
             console.log(elementNames.length + '/' + $scope.elementIndex);
         };
 
-        $scope.previous = function () {
+        $scope.previous = function ($scope) {
             if ($scope.elementIndex >= $scope.numberOfPages - 1) {
                 $scope.elementIndex = 0;
             } else {

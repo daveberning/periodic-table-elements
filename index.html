@@ -8,25 +8,54 @@
     <meta name="description" content="Interactive Periodic Table of Elements">
     <meta name="author" content="Dave Berning">
 
-    <link rel="stylesheet" href="/assets/bower_components/bootstrap/dist/bootstrap.css">
-    <link rel="stylesheet" href="/assets/css/styles.css?v=1.0">
+    <link rel="stylesheet" href="/assets/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 
-<body ng-app="periodicTableOfElements">
-    <div ng-controller="elementNamesController">
-        <div ng-repeat="elementName in elementNames track by $index">
-            <div ng-if="elementIndex == $index">
-                <p class="element"><strong>{{elementName.small}}</strong><br>
-                {{elementName.number}}<br>
-                {{elementName.molar}}</p>
+<body ng-app="periodicTableOfElements" ng-controller="elementNamesController">
+    <div ng-repeat="elementName in elementNames track by $index">
+        <div ng-if="elementIndex == $index">
+            <header>
+                <div class="row">
+                    <div class="col-sm-1">
+                        <div class="element btn-block">
+                            <strong>{{elementName.small}}</strong><br>
+                            {{elementName.number}}<br>
+                            {{elementName.molar}}
+                        </div>
+                    </div>
+                    <div class="col-sm-10">
+                        {{elementName.name}}
+                        {{electronArray}}
+                    </div>
+                </div>
+            </header>
+
+            <div class="content row">
+                <div class="container-fluid">
+                    <div ng-repeat="elementName in elementNames.slice(0, $scope.atomicNumber+1)">
+                        <div class="quarks electron"></div>
+                        <div class="quarks proton"></div>
+                    </div>
+
+                    <div ng-repeat="elementName in elementNames.slice(0, $scope.neutronsInAtom)">
+                        <div class="quarks neutron"></div>
+                    </div>
+                </div>
             </div>
         </div>
-        {{numberOfPages}}
-        {{elementIndex}}
-        <button ng-click="previous()">Next</button>
-        <button ng-click="next()">Next</button>
+    </div>
+
+    <div class="navigation row">
+        <div class="container-fluid">
+            {{numberOfPages}}
+            {{elementIndex}}
+            <button ng-click="previous()">Previous</button>
+            <button ng-click="next()">Next</button>
+        </div>
     </div>
 </body>
+
 <script src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/assets/bower_components/angular/angular.js"></script>
 <script src="/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
