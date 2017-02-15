@@ -9,7 +9,7 @@ periodicTable.controller('elementNamesController', function($scope, elementsFact
         var elementNames = [];
 
         $scope.elementNames = elementNames;
-        //$scope.neutronArray = [];
+        $scope.neutronArray = [];
         $scope.elementIndex = 0;
         $scope.quarkIndex = 1;
 
@@ -41,7 +41,7 @@ periodicTable.controller('elementNamesController', function($scope, elementsFact
             $scope.roundedAtomicWeight = Math.round(elementNames[i].molar);
             $scope.atomicNumber = elementNames[i].number;
             $scope.neutronsInAtom = $scope.roundedAtomicWeight - $scope.atomicNumber;
-            console.log($scope.neutronsInAtom);
+            $scope.neutronArray.push($scope.neutronsInAtom);
         }
 
         $scope.next = function () {
@@ -81,6 +81,6 @@ periodicTable.controller('elementNamesController', function($scope, elementsFact
             return new Array(num);
         }
 
-        console.log(elementNames);
+        console.log($scope.neutronArray);
     });
 });
