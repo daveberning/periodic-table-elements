@@ -8,38 +8,61 @@
     <meta name="description" content="Interactive Periodic Table of Elements">
     <meta name="author" content="Dave Berning">
 
-    <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/styles.css?v=1.0">
+    <link rel="stylesheet" href="/assets/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=1.0">
 </head>
 
 <body ng-app="periodicTableOfElements" ng-controller="elementNamesController">
     <div ng-repeat="elementName in elementNames track by $index">
         <div ng-if="elementIndex == $index">
-            <div class="element"><strong>{{elementName.small}}</strong><br>
-            {{elementName.number}}<br>
-            {{elementName.molar}}</div>
-
-            <div ng-repeat="electron in elementName.electrons track by $index">
-                <div class="quark electron" ng-repeat="i in getNumber(electron) track by $index"></div>
-            </div>
-
-            <div class="quark proton" ng-repeat="i in getNumber(number) track by $index"></div>
-
-            <div ng-repeat="neutron in neutronArray track by $index">
-                <div ng-if="elementIndex == $index">
-                    <div class="quark neutron" ng-repeat="i in getNumber(neutron) track by $index"></div>
+            <header class="row">
+                <div class="col-sm-2">
+                    <div class="element"><strong>{{elementName.small}}</strong><br>
+                    {{elementName.number}}<br>
+                    {{elementName.molar}}</div>
                 </div>
-            </div>
+                <div class="col-sm-10 text-right">
+                    <p>Protons:{{elementName.number}}<br>
+                    Electrons: {{elementName.number}}<br>
+                    Neutrons: {{elementName.molar - elementName.number | number: 0}}</p>
+                </div>
+            </header>
 
-            Number of Protons:{{elementName.number}}<br>
-            Number of Electrons: {{elementName.number}}<br>
-            Number of Neutrons: {{elementName.molar - elementName.number | number: 0}}
-        </div>
-    </div>
-    <hr>
-    Total Number of Elements: {{numberOfPages}}
-    <button ng-click="previous()" ng-disabled="elementIndex <= 0">Previous</button>
-    <button ng-click="next()" ng-disabled="elementIndex >= numberOfPages">Next</button>
+            <div class="atom">
+                <div class="row">
+                    <div class="container-fluid text-center">
+                        <div ng-repeat="electron in elementName.electrons track by $index">
+                            <div class="quark electron" ng-repeat="i in getNumber(electron) track by $index"></div>
+                        </div>
+
+                        <div class="quark proton" ng-repeat="i in getNumber(number) track by $index"></div>
+
+                        <div ng-repeat="neutron in neutronArray track by $index">
+                            <div ng-if="elementIndex == $index">
+                                <div class="quark neutron" ng-repeat="i in getNumber(neutron) track by $index"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- atom -->
+            <hr>
+            <div class="navigation">
+                <div class="row">
+                    <div class="container-fluid">
+                        <div class="col-sm-2">
+                            <button class="btn-block" ng-click="previous()" ng-disabled="elementIndex <= 0">Previous</button>
+                        </div>
+                        <div class="col-sm-8 text-center">
+                            {{elementName.name}}
+                        </div>
+                        <div class="col-sm-2">
+                            <button class="btn-block" ng-click="next()" ng-disabled="elementIndex >= numberOfPages">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- navigation -->
+        </div><!-- element index -->
+    </div><!-- element loop -->
 </body>
 <script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="assets/bower_components/angular/angular.js"></script>
