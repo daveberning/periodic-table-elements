@@ -1,0 +1,13 @@
+<div ng-repeat="element in elements | orderBy:'+number'">
+    <div ng-if="elementIndex == element.number-1">
+        <strong>{{element.name}} - {{element.number}}</strong>
+        {{element.electrons}}
+        <br>
+        <div ng-repeat="electrons in elements[element.number-1].electrons track by $index-1">
+            {{electrons}}
+        </div>
+    </div>
+</div>
+<hr>
+<button ng-click="previous()" ng-disabled="elementIndex == 0">Previous</button>
+<button ng-click="next()">Next</button>

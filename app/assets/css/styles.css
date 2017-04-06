@@ -1,0 +1,244 @@
+/* GENERIC STYLES FOR THE PEN
+-------------------------------------- */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #222222;
+}
+html p,
+html h1,
+body p,
+body h1 {
+  color: #fff;
+}
+html .wrapper,
+body .wrapper {
+  padding: 15px;
+}
+
+header {
+    padding: 15px;
+}
+
+.element {
+    border: 5px solid #000;
+    border-radius: 2px;
+    padding: 15px;
+    text-align: center;
+    width: 60%;
+    float: left;
+}
+
+.element strong {
+    font-size: 20px;
+}
+
+.atom {
+  width: 200px;
+  margin: 0 auto;
+  position: relative;
+  margin: 100px auto 100px auto;
+}
+.atom .electron-shell {
+  border: 1px solid  #fff;
+  position: absolute;
+  border-radius: 50%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.atom .electron {
+  width: 7px;
+  height: 7px;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: absolute;
+}
+.atom .electron:after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  box-shadow: 0 0 15px #fff;
+  left: 50%;
+  margin-left: -7px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-animation: paricle_ 2s infinite linear;
+          animation: paricle_ 2s infinite linear;
+}
+.atom .nucleus {
+  background: #fff;
+  width: 10%;
+  height: 10%;
+  box-shadow: 0 0 15px #fff;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  position: relative;
+  top: 45%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.nucleusAnimate {
+  -webkit-animation: electronStill 0.25s linear infinite;
+          animation: electronStill 0.25s linear infinite;
+}
+
+.shellAnimationOne {
+  -webkit-animation: shell3dRotateFirst 0.25s linear infinite;
+          animation: shell3dRotateFirst 0.25s linear infinite;
+}
+
+.shellAnimationTwo {
+  -webkit-animation: shell3dRotateSecond 0.25s linear infinite;
+          animation: shell3dRotateSecond 0.25s linear infinite;
+}
+
+.shellAnimationThree {
+  -webkit-animation: shell3dRotateThird 0.25s linear infinite;
+          animation: shell3dRotateThird 0.25s linear infinite;
+}
+
+@-webkit-keyframes electron {
+  from {
+    -webkit-transform: rotateX(90deg) rotateY(0deg);
+            transform: rotateX(90deg) rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateX(90deg) rotateY(-360deg);
+            transform: rotateX(90deg) rotateY(-360deg);
+  }
+}
+
+@keyframes electron {
+  from {
+    -webkit-transform: rotateX(90deg) rotateY(0deg);
+            transform: rotateX(90deg) rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateX(90deg) rotateY(-360deg);
+            transform: rotateX(90deg) rotateY(-360deg);
+  }
+}
+@-webkit-keyframes electronStill {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  25% {
+    -webkit-transform: translate3d(-0.5px, -0.5px, 0);
+            transform: translate3d(-0.5px, -0.5px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0.5px, 0.5px, 0);
+            transform: translate3d(0.5px, 0.5px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes electronStill {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  25% {
+    -webkit-transform: translate3d(-0.5px, -0.5px, 0);
+            transform: translate3d(-0.5px, -0.5px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0.5px, 0.5px, 0);
+            transform: translate3d(0.5px, 0.5px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes shell2dRotate {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 1080deg);
+            transform: rotate3d(0, 0, 1, 1080deg);
+  }
+}
+@keyframes shell2dRotate {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 1080deg);
+            transform: rotate3d(0, 0, 1, 1080deg);
+  }
+}
+@-webkit-keyframes shell3dRotateFirst {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(1, 1, 1, 360deg);
+            transform: rotate3d(1, 1, 1, 360deg);
+  }
+}
+@keyframes shell3dRotateFirst {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(1, 1, 1, 360deg);
+            transform: rotate3d(1, 1, 1, 360deg);
+  }
+}
+@-webkit-keyframes shell3dRotateSecond {
+  from {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+            transform: rotate3d(0, 0, 1, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(-1, -1, -1, 360deg);
+            transform: rotate3d(-1, -1, -1, 360deg);
+  }
+}
+@keyframes shell3dRotateSecond {
+  from {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+            transform: rotate3d(0, 0, 1, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(-1, -1, -1, 360deg);
+            transform: rotate3d(-1, -1, -1, 360deg);
+  }
+}
+@-webkit-keyframes shell3dRotateThird {
+  from {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+            transform: rotate3d(0, 0, 1, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(-0.5, 0.5, 0.5, 360deg);
+            transform: rotate3d(-0.5, 0.5, 0.5, 360deg);
+  }
+}
+@keyframes shell3dRotateThird {
+  from {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+            transform: rotate3d(0, 0, 1, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(-0.5, 0.5, 0.5, 360deg);
+            transform: rotate3d(-0.5, 0.5, 0.5, 360deg);
+  }
+}
