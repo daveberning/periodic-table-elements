@@ -10,3 +10,9 @@ periodicTable.directive('something', [function() {
         }
     };
 }]);
+
+periodicTable.directive('myRepeatDirective', function() {
+  return function(scope, element, attrs) {
+      // jquery for atom
+  };
+})

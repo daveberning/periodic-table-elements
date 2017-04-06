@@ -1,0 +1,154 @@
+$shellSpeed: 5s; // change this to adjust the shell speed
+
+/* GENERIC STYLES FOR THE PEN
+-------------------------------------- */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: #222222;
+
+    p,
+    h1 {
+        color: #fff;
+    }
+
+    .wrapper {
+        padding: 15px;
+    }
+}
+
+.gutter-top {
+    margin-top: 30px;
+}
+
+/* BEGIN ATOM CSS
+-------------------------------------- */
+.atom {
+    width: 200px;
+    margin: 0 auto;
+    position: relative;
+    margin: 100px auto 100px auto;
+
+    .electron-shell {
+        border: 1px solid  #fff;
+        position: absolute;
+        border-radius: 50%;
+        transform-style: preserve-3d;
+    }
+
+    .electron {
+        width: 7px;
+        height: 7px;
+        left: 50%;
+        top: 50%;
+        border-radius: 50%;
+        transform-style: preserve-3d;
+        position: absolute;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: -3px;
+            box-shadow: 0 0 15px #fff;
+            left: 50%;
+            margin-left: -7px;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #fff;
+            animation: paricle_ 2s infinite linear;
+        }
+  }
+
+    .nucleus {
+        background: #fff;
+        width: 10%;
+        height: 10%;
+        box-shadow: 0 0 15px #fff;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        margin: 0 auto;
+        position: relative;
+        top: 45%;
+        transform: translateY(-50%);
+    }
+}
+
+.nucleusAnimate {
+    animation: electronStill $shellSpeed linear infinite;
+}
+
+.electron-shell:nth-child(3n+1) {
+    animation: shell3dRotateFirst $shellSpeed/2 linear infinite;
+}
+
+.electron-shell:nth-child(3n+2) {
+    animation: shell3dRotateSecond $shellSpeed/1.25 linear infinite;
+}
+
+.electron-shell:nth-child(3n+3) {
+    animation: shell3dRotateThird $shellSpeed/1 linear infinite;
+}
+
+@keyframes electron {
+    from {
+        transform: rotateX(90deg) rotateY(0deg);
+    } to {
+        transform: rotateX(90deg) rotateY(-360deg);
+    }
+}
+
+@keyframes electronStill {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    25% {
+        transform: translate3d(-.5px, -.5px, 0);
+    }
+
+    75% {
+        transform: translate3d(.5px, .5px, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes shell2dRotate {
+    from {
+        transform: rotate3d(0, 0, 0, 0deg);
+    }
+    to {
+        transform: rotate3d(0, 0, 1, 1080deg);
+    }
+}
+
+@keyframes shell3dRotateFirst {
+    from {
+        transform: rotate3d(0, 0, 0, 0deg);
+    }
+    to {
+        transform: rotate3d(0, 1, 1, 360deg);
+    }
+}
+
+@keyframes shell3dRotateSecond {
+    from {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+    to {
+        transform: rotate3d(0, -1, -1, 720deg);
+    }
+}
+
+@keyframes shell3dRotateThird {
+    from {
+        transform: rotate3d(0, 0, 0, 0deg);
+    }
+    to {
+        transform: rotate3d(0, 2, 2, 1080deg);
+    }
+}

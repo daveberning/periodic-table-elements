@@ -3,11 +3,20 @@
         <strong>{{element.name}} - {{element.number}}</strong>
         {{element.electrons}}
         <br>
-        <div ng-repeat="electrons in elements[element.number-1].electrons track by $index-1">
-            {{electrons}}
-        </div>
+
+        <div class="atom">
+            <div ng-repeat="electrons in elements[element.number-1].electrons track by $index" class="electron-shell">
+                <div ng-repeat="n in [] | range:electrons" my-repeat-directive class="">
+                    <div class="electron"></div>
+                </div>
+            </div>
+            <div class="nucleus nucleusAnimate"></div>
+        </div><!-- atom -->
     </div>
 </div>
-<hr>
-<button ng-click="previous()" ng-disabled="elementIndex == 0">Previous</button>
-<button ng-click="next()">Next</button>
+
+<div class="table-controls">
+    <button ng-click="previous()" ng-disabled="elementIndex == 0">Previous</button>
+    <button ng-click="next()">Next</button>
+    <button ng-click="next()">Next</button>
+</div>
