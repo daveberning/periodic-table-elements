@@ -1,12 +1,11 @@
-$shellSpeed: 5s; // change this to adjust the shell speed
+$shellSpeed: .5s; // change this to adjust the shell speed
 
 /* GENERIC STYLES FOR THE PEN
 -------------------------------------- */
-html,
-body {
+html {
     width: 100%;
     height: 100%;
-    background: #222222;
+    //background: #222222;
 
     p,
     h1 {
@@ -18,17 +17,94 @@ body {
     }
 }
 
+body {
+    background: url("../images/carina.jpg");
+
+    p {
+        font-weight: 100;
+    }
+}
+
+.btn {
+    background: none;
+    border: 1px solid #fff;
+    font-weight: 100;
+    border-radius: 2px;
+    font-size: 2rem;
+
+    &.more-info {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+}
+
 .gutter-top {
     margin-top: 30px;
+}
+
+.table-controls {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+
+    a {
+        text-decoration: underline;
+    }
+
+    .lnr {
+        color: #fff;
+        font-size: 5rem;
+        cursor: pointer;
+    }
+
+    .lnr-rocket {
+        font-size: 2rem;
+        vertical-align: middle;
+        color: #777;
+    }
+}
+
+.table-square {
+    border: 4px solid #fff;
+    border-radius: 2px;
+    color: #fff;
+    margin: 15px 0 0 15px;
+    width: 130px;
+    height: 130px;
+    display: table;
+    position: relative;
+
+    div {
+        display: table-cell;
+        vertical-align: middle;
+
+
+        .number {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+
+        strong {
+            font-size: 3rem;
+        }
+    }
+}
+
+.gutter-top {
+    margin-top: 15px;
 }
 
 /* BEGIN ATOM CSS
 -------------------------------------- */
 .atom {
     width: 200px;
-    margin: 0 auto;
-    position: relative;
-    margin: 100px auto 100px auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     .electron-shell {
         border: 1px solid  #fff;
@@ -38,8 +114,8 @@ body {
     }
 
     .electron {
-        width: 7px;
-        height: 7px;
+        // width: 7px;
+        // height: 7px;
         left: 50%;
         top: 50%;
         border-radius: 50%;
@@ -52,7 +128,7 @@ body {
             top: -3px;
             box-shadow: 0 0 15px #fff;
             left: 50%;
-            margin-left: -7px;
+            margin-left: -3px;
             width: 7px;
             height: 7px;
             border-radius: 50%;
@@ -80,15 +156,15 @@ body {
 }
 
 .electron-shell:nth-child(3n+1) {
-    animation: shell3dRotateFirst $shellSpeed/2 linear infinite;
+    //animation: shell3dRotateFirst $shellSpeed/2 linear infinite;
 }
 
 .electron-shell:nth-child(3n+2) {
-    animation: shell3dRotateSecond $shellSpeed/1.25 linear infinite;
+    //animation: shell3dRotateSecond $shellSpeed/1.25 linear infinite;
 }
 
 .electron-shell:nth-child(3n+3) {
-    animation: shell3dRotateThird $shellSpeed/1 linear infinite;
+    //animation: shell3dRotateThird $shellSpeed/1 linear infinite;
 }
 
 @keyframes electron {
@@ -137,7 +213,7 @@ body {
 
 @keyframes shell3dRotateSecond {
     from {
-        transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg);
     }
     to {
         transform: rotate3d(0, -1, -1, 720deg);

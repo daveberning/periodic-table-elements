@@ -1,7 +1,16 @@
 <div ng-repeat="element in elements | orderBy:'+number'">
     <div ng-if="elementIndex == element.number-1">
-        <strong>{{element.name}} - {{element.number}}</strong>
-        {{element.electrons}}
+        <div class="table-square">
+            <div class="text-center">
+                <span class="number">{{element.number}}</span>
+                <strong>{{element.small}}</strong><br>
+                {{element.name}}<br>
+                {{element.molar}}
+            </div>
+        </div>
+
+        <a href="#" class="btn btn-primary more-info">More on {{element.name}} <span class="lnr lnr-chevron-right"></span></a>
+
         <br>
 
         <div class="atom">
@@ -16,7 +25,14 @@
 </div>
 
 <div class="table-controls">
-    <button ng-click="previous()" ng-disabled="elementIndex == 0">Previous</button>
-    <button ng-click="next()">Next</button>
-    <button ng-click="next()">Next</button>
+    <div class="col-sm-3 gutter-top">
+        <span class="lnr lnr-chevron-left" ng-click="previous()" ng-disabled="elementIndex == 0"></span>
+        <span class="lnr lnr-chevron-right" ng-click="next()"></span>
+        <span class="lnr lnr-cog"></span>
+    </div>
+    <div class="col-sm-6 col-sm-offset-3 text-right">
+        <p class="text-muted">Copyright &copy; 2017. Created by <a href="https://daveberning.io" class="text-muted" target="_blank">Dave Berning</a>.<br>
+        Proudly powered by wind energy at GreenGeeks.<br>
+        <span class="lnr lnr-rocket text-muted"></span> Always look up.</p>
+    </div>
 </div>
