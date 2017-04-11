@@ -107,15 +107,16 @@ body {
     transform: translate(-50%, -50%);
 
     .electron-shell {
-        border: 1px solid  #fff;
         position: absolute;
         border-radius: 50%;
         transform-style: preserve-3d;
+
+        &.show-path {
+            border: 1px solid  #fff;
+        }
     }
 
     .electron {
-        // width: 7px;
-        // height: 7px;
         left: 50%;
         top: 50%;
         border-radius: 50%;
@@ -146,25 +147,30 @@ body {
         border: 1px solid #ccc;
         margin: 0 auto;
         position: relative;
-        top: 45%;
+        top: 50%;
         transform: translateY(-50%);
     }
 }
 
-.nucleusAnimate {
+.nucleus.animate {
     animation: electronStill $shellSpeed linear infinite;
+    top: 45%;
 }
 
-.electron-shell:nth-child(3n+1) {
-    //animation: shell3dRotateFirst $shellSpeed/2 linear infinite;
+.electron-shell.animate:nth-child(3n+1) {
+    animation: shell3dRotateFirst $shellSpeed linear infinite;
 }
 
-.electron-shell:nth-child(3n+2) {
-    //animation: shell3dRotateSecond $shellSpeed/1.25 linear infinite;
+.electron-shell.animate:first-child {
+    animation: shell3dRotateFirst $shellSpeed*2 linear infinite;
 }
 
-.electron-shell:nth-child(3n+3) {
-    //animation: shell3dRotateThird $shellSpeed/1 linear infinite;
+.electron-shell.animate:nth-child(3n+2) {
+    animation: shell3dRotateSecond $shellSpeed linear infinite;
+}
+
+.electron-shell.animate:nth-child(3n+3) {
+    animation: shell3dRotateThird $shellSpeed linear infinite;
 }
 
 @keyframes electron {

@@ -14,12 +14,12 @@
         <br>
 
         <div class="atom">
-            <div ng-repeat="electrons in elements[element.number-1].electrons track by $index" class="electron-shell">
+            <div ng-repeat="electrons in elements[element.number-1].electrons track by $index" class="electron-shell show-path" ng-class="{'animate' : animateAtom}">
                 <div ng-repeat="n in [] | range:electrons" my-repeat-directive class="">
                     <div class="electron"></div>
                 </div>
             </div>
-            <div class="nucleus nucleusAnimate"></div>
+            <div class="nucleus" ng-class="{'animate' : animateAtom}"></div>
         </div><!-- atom -->
     </div>
 </div>
@@ -28,7 +28,8 @@
     <div class="col-sm-3 gutter-top">
         <span class="lnr lnr-chevron-left" ng-click="previous()" ng-disabled="elementIndex == 0"></span>
         <span class="lnr lnr-chevron-right" ng-click="next()"></span>
-        <span class="lnr lnr-cog"></span>
+        <button class="btn btn-primary toggleAnimate">Animate</button>
+        <button class="btn btn-primary togglePath">Toggle Path</button>
     </div>
     <div class="col-sm-6 col-sm-offset-3 text-right">
         <p class="text-muted">Copyright &copy; 2017. Created by <a href="https://daveberning.io" class="text-muted" target="_blank">Dave Berning</a>.<br>
@@ -36,3 +37,13 @@
         <span class="lnr lnr-rocket text-muted"></span> Always look up.</p>
     </div>
 </div>
+
+<script type="text/javascript">
+    $('.toggleAnimate').click(function() {
+        $('.electron-shell, .nucleus').toggleClass('animate');
+    });
+
+    $('.togglePath').click(function() {
+        $('.electron-shell').toggleClass('show-path');
+    });
+</script>

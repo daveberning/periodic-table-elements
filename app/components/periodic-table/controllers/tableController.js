@@ -12,14 +12,6 @@ periodicTable.controller('tableController', function($scope, elementsFactory) {
             }
         }
 
-        // for (var a = 0; a < $scope.items.actinoids.length; a++) {
-        //     elementsArr.push($scope.items.actinoids[a]);
-        // }
-
-        // for (var l = 0; l < $scope.items.lanthanoids.length; l++) {
-        //     elementsArr.push($scope.items.lanthanoids[l]);
-        // }
-
         // Defining scope
         $scope.elements = elementsArr;
         $scope.elementIndex = 0;
@@ -46,88 +38,76 @@ periodicTable.controller('tableController', function($scope, elementsFactory) {
 });
 
 periodicTable.filter('range', function() {
+console.log("hi");
   return function(val, range) {
     range = parseInt(range);
     for (var i=0; i<range; i++)
-      val.push(i);
-      // define elements
-var atom = '.atom';
-var electronShell = '.electron-shell';
-var nucleus = '.nucleus';
-var electron = '.electron';
+    val.push(i);
+    // define elements
 
-// atom height same as width
-var atomWidth = $(atom).width();
-$(atom).css('height', atomWidth);
+    var atom = '.atom';
+    var electronShell = '.electron-shell';
+    var nucleus = '.nucleus';
+    var electron = '.electron';
 
-// length and arrays
-var electronPathLength = $(electronShell).length;
-var nucleus = $(nucleus).width();
-var electronPathArray = [];
+    // atom height same as width
+    var atomWidth = $(atom).width();
+    $(atom).css('height', atomWidth);
 
-// meet part of the potatoes
-for (var p = 0; p < electronPathLength; p++) {
-    var path = p+1
-    var pathSize = atomWidth / path;
-    var halfSize = pathSize/2;
-    var pathPosition = (100 - (100/electronPathLength)*path);
-    var reversePathPosition = 100 - (100 - (100/electronPathLength)*path);
+    // length and arrays
+    var electronPathLength = $(electronShell).length;
+    var nucleus = $(nucleus).width();
+    var electronPathArray = [];
 
-    var additionalWidth = 15 + electronPathLength;
-    var growingAtom = atomWidth + additionalWidth;
-    var radiusSize = growingAtom / 200;
+    // meet part of the potatoes
+    for (var p = 0; p < electronPathLength; p++) {
+        var path = p+1
+        var pathSize = atomWidth / path;
+        var halfSize = pathSize/2;
+        var pathPosition = (100 - (100/electronPathLength)*path);
+        var reversePathPosition = 100 - (100 - (100/electronPathLength)*path);
 
-    // grow the atom when more shells are added
-    if (electronPathLength > 1) {
-        $(atom).css({
-            'width': growingAtom,
-            'height': growingAtom
+        var additionalWidth = 15 + electronPathLength;
+        var growingAtom = atomWidth + additionalWidth;
+        var radiusSize = growingAtom / 200;
+
+        // grow the atom when more shells are added
+        if (electronPathLength > 1) {
+            $(atom).css({
+                'width': growingAtom,
+                'height': growingAtom
+            });
+            console.log("dude");
+        }
+
+        // Equally space electrons in shell
+        var type = 1, //circle type - 1 whole, 0.5 half, 0.25 quarter
+            radius = (reversePathPosition * radiusSize) + "px", //distance from center
+            start = 0, //shift start from 0
+            $elements = $("" + electronShell + ":nth-child(" + path + ") " + electron + ""),
+            numberOfElements = (type === 1) ? $elements.length : $elements.length - 1,
+            slice = 360 * type / numberOfElements;
+
+        $elements.each(function(i) {
+            var $self = $(this),
+                rotate = slice * i + start,
+                rotateReverse = rotate * -1;
+
+            $self.css({
+                'transform': 'rotate(' + rotate + 'deg) translate(' + radius + ') rotate(' + rotateReverse + 'deg)'
+            });
         });
-    }
 
-    console.log(growingAtom);
-
-    // Equally space electrons in shell
-    var type = 1, //circle type - 1 whole, 0.5 half, 0.25 quarter
-        radius = (reversePathPosition * radiusSize) + "px", //distance from center
-        start = 0, //shift start from 0
-        $elements = $("" + electronShell + ":nth-child(" + path + ") " + electron + ""),
-        numberOfElements = (type === 1) ? $elements.length : $elements.length - 1,
-        slice = 360 * type / numberOfElements;
-
-    $elements.each(function(i) {
-        var $self = $(this),
-            rotate = slice * i + start,
-            rotateReverse = rotate * -1;
-
-        $self.css({
-            'transform': 'rotate(' + rotate + 'deg) translate(' + radius + ') rotate(' + rotateReverse + 'deg)'
+        // add styles from equal spacing function
+        $(".electron-shell:nth-child(" + path + ")").css({
+            'width': reversePathPosition + "%",
+            'height': reversePathPosition + "%",
+            'top': pathPosition  + "%",
+            'left': pathPosition  + "%",
+            'margin-left': -pathPosition/2 + "%",
+            'margin-top': -pathPosition/2 + "%"
         });
-    });
-
-    // add styles from equal spacing function
-    $(".electron-shell:nth-child(" + path + ")").css({
-        'width': reversePathPosition + "%",
-        'height': reversePathPosition + "%",
-        'top': pathPosition  + "%",
-        'left': pathPosition  + "%",
-        'margin-left': -pathPosition/2 + "%",
-        'margin-top': -pathPosition/2 + "%"
-    });
-} // end loop
-
-// Button controls
-$('.removeShell').on('click', function() {
-    $('.electron-shell').css('border', 'none');
-});
-
-$('.stopAnimate').on('click', function() {
-    $('.electron-shell').removeClass('shellAnimationOne');
-    $('.electron-shell').removeClass('shellAnimationTwo');
-    $('.electron-shell').removeClass('shellAnimationThree');
-    $('.nucleus').removeClass('nucleusAnimate');
-    $('.nucleus').css('top', '50%');
-});
+    } // end loop
     return val;
   };
 });
