@@ -1,6 +1,16 @@
 var periodicTable = angular.module("periodicTableOfElements");
 
 periodicTable.controller('tableController', function($scope, elementsFactory, wikiService) {
+    var init = function() {
+        $scope.togglePanel = false;
+        console.log($scope.togglePanel);
+    }
+
+    var toggle = function() {
+        $scope.togglePanel = !$scope.togglePanel;
+        console.log($scope.togglePanel);
+    }
+
     elementsFactory.getItems().then(function(response){
         $scope.items = response.data;
         var elementsArr = []; // every element
@@ -38,6 +48,8 @@ periodicTable.controller('tableController', function($scope, elementsFactory, wi
         console.log(data);
         $scope.wikiData = data.data;
     });
+
+    init();
 });
 
 periodicTable.filter('range', function() {

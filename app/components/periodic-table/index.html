@@ -1,5 +1,8 @@
 <div ng-repeat="element in elements | orderBy:'+number'">
     <div ng-if="elementIndex == element.number-1">
+
+        <a class="btn btn-primary more-info">More on {{element.name}} <span class="lnr lnr-chevron-right"></span></a>
+
         <div class="table-square">
             <div class="square">
                 <div class="text-center">
@@ -17,10 +20,6 @@
             </ul>
         </div>
 
-        <a href="{{element.wiki}}" ng-disabled="!element.wiki.length" class="btn btn-primary more-info" target="_blank">More on {{element.name}} <span class="lnr lnr-chevron-right"></span></a>
-
-        <br>
-
         <div class="atom" ng-class="{'foo': elements[element.number-1].electrons.length < 3}">
             <div ng-repeat="electrons in elements[element.number-1].electrons track by $index" class="electron-shell show-path" ng-class="{'animate' : animateAtom}">
                 <div ng-repeat="n in [] | range:electrons" my-repeat-directive class="">
@@ -29,13 +28,15 @@
             </div>
             <div class="nucleus" ng-class="{'animate' : animateAtom}"></div>
         </div><!-- atom -->
+    </div>
+</div>
 
-        <div class="info-panel">
-            <div class="container-fluid">
-                <h1>{{element.name}}</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-        </div>
+<div class="info-panel open-panel">
+    <div class="container-fluid">
+        <h1>Hydrogen</h1>
+        <div class="close-btn"><span>X</span> Close</div>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
 </div>
 
@@ -70,6 +71,10 @@
 </div>
 
 <script type="text/javascript">
+    $('.more-info, .close-btn').click(function() {
+        $('.info-panel').toggleClass('open-panel');
+    });
+
     $('.toggleAnimate').click(function() {
         $('.electron-shell, .nucleus').toggleClass('animate');
     });
