@@ -1,12 +1,20 @@
 <div ng-repeat="element in elements | orderBy:'+number'">
     <div ng-if="elementIndex == element.number-1">
         <div class="table-square">
-            <div class="text-center">
-                <span class="number">{{element.number}}</span>
-                <strong>{{element.small}}</strong><br>
-                {{element.name}}<br>
-                {{element.molar}}
+            <div class="square">
+                <div class="text-center">
+                    <span class="number">{{element.number}}</span>
+                    <strong>{{element.small}}</strong><br>
+                    {{element.name}}<br>
+                    {{element.molar}}
+                </div>
             </div>
+
+            <ul class="list-unstyled">
+                <li>Protons: {{element.number}}</li>
+                <li>Neutrons: {{element.molar - element.number | number:0}}</li>
+                <li>Electrons: {{element.number}}</li>
+            </ul>
         </div>
 
         <a href="#" class="btn btn-primary more-info">More on {{element.name}} <span class="lnr lnr-chevron-right"></span></a>
@@ -25,13 +33,27 @@
 </div>
 
 <div class="table-controls">
-    <div class="col-sm-3 gutter-top">
-        <span class="lnr lnr-chevron-left" ng-click="previous()" ng-disabled="elementIndex == 0"></span>
-        <span class="lnr lnr-chevron-right" ng-click="next()"></span>
-        <button class="btn btn-primary toggleAnimate">Animate</button>
-        <button class="btn btn-primary togglePath">Toggle Path</button>
+    <div class="col-sm-3">
+        <div class="row">
+            <div class="col-sm-6">
+                <p ng-click="previous()" ng-disabled="elementIndex == 1" class="pointer"><span class="lnr lnr-chevron-left"></span> Previous</p>
+            </div>
+            <div class="col-sm-6">
+                <p ng-click="next()" class="pointer">Next <span class="lnr lnr-chevron-right"></span></p>
+            </div>
+        </div>
     </div>
-    <div class="col-sm-6 col-sm-offset-3 text-right">
+    <div class="col-sm-6">
+        <div class="row">
+            <div class="col-sm-6">
+                <button class="btn btn-primary btn-block toggleAnimate">Animate</button>
+            </div>
+            <div class="col-sm-6">
+                <button class="btn btn-primary btn-block togglePath">Toggle Path</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3 text-right gutter-bottom">
         <p class="text-muted">Copyright &copy; 2017. Created by <a href="https://daveberning.io" class="text-muted" target="_blank">Dave Berning</a>.<br>
         Proudly powered by wind energy at GreenGeeks.<br>
         <span class="lnr lnr-rocket text-muted"></span> Always look up.</p>
