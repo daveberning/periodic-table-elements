@@ -10,6 +10,7 @@
 					"number": 1,
 					"small": "H",
 					"molar": 1.00794,
+                    "wiki": "https://en.wikipedia.org/wiki/Hydrogen",
 					"electrons": [
 						1
 					]
@@ -21,6 +22,7 @@
 					"number": 2,
 					"small": "He",
 					"molar": 4.002602,
+                    "wiki": "https://en.wikipedia.org/wiki/Helium",
 					"electrons": [
 						2
 					]
@@ -37,6 +39,7 @@
 					"number": 3,
 					"small": "Li",
 					"molar": 6.941,
+                    "wiki": "https://en.wikipedia.org/wiki/Lithium",
 					"electrons": [
 						2,
 						1
@@ -49,6 +52,7 @@
 					"number": 4,
 					"small": "Be",
 					"molar": 9.012182,
+                    "wiki": "https://en.wikipedia.org/wiki/https://en.wikipedia.org/wiki/Beryllium",
 					"electrons": [
 						2,
 						2
@@ -61,6 +65,7 @@
 					"number": 5,
 					"small": "B",
 					"molar": 10.811,
+                    "wiki": "https://en.wikipedia.org/wiki/Boron",
 					"electrons": [
 						2,
 						3
@@ -73,6 +78,7 @@
 					"number": 6,
 					"small": "C",
 					"molar": 12.0107,
+                    "wiki": "https://en.wikipedia.org/wiki/Carbon",
 					"electrons": [
 						2,
 						4
@@ -85,6 +91,7 @@
 					"number": 7,
 					"small": "N",
 					"molar": 14.0067,
+                    "wiki": "https://en.wikipedia.org/wiki/Nitrogen",
 					"electrons": [
 						2,
 						5
@@ -97,6 +104,7 @@
 					"number": 8,
 					"small": "O",
 					"molar": 15.9994,
+                    "wiki": "https://en.wikipedia.org/wiki/Oxygen",
 					"electrons": [
 						2,
 						6
@@ -109,6 +117,7 @@
 					"number": 9,
 					"small": "F",
 					"molar": 18.998404,
+                    "wiki": "https://en.wikipedia.org/wiki/Fluorine",
 					"electrons": [
 						2,
 						7
@@ -121,6 +130,7 @@
 					"number": 10,
 					"small": "Ne",
 					"molar": 20.1797,
+                    "wiki": "https://en.wikipedia.org/wiki/Neon",
 					"electrons": [
 						2,
 						8
@@ -138,6 +148,7 @@
 					"number": 11,
 					"small": "Na",
 					"molar": 22.989769,
+                    "wiki": "https://en.wikipedia.org/wiki/Sodium",
 					"electrons": [
 						2,
 						8,
@@ -151,6 +162,7 @@
 					"number": 12,
 					"small": "Mg",
 					"molar": 24.305,
+                    "wiki": "https://en.wikipedia.org/wiki/Magnesium",
 					"electrons": [
 						2,
 						8,
@@ -164,6 +176,7 @@
 					"number": 13,
 					"small": "Al",
 					"molar": 26.981539,
+                    "wiki": "https://en.wikipedia.org/wiki/Aluminium",
 					"electrons": [
 						2,
 						8,
@@ -177,6 +190,7 @@
 					"number": 14,
 					"small": "Si",
 					"molar": 28.0855,
+                    "wiki": "https://en.wikipedia.org/wiki/Silicon",
 					"electrons": [
 						2,
 						8,
@@ -190,6 +204,7 @@
 					"number": 15,
 					"small": "P",
 					"molar": 30.973763,
+                    "wiki": "https://en.wikipedia.org/wiki/Phosphorus",
 					"electrons": [
 						2,
 						8,
@@ -203,6 +218,7 @@
 					"number": 16,
 					"small": "S",
 					"molar": 32.065,
+                    "wiki": "https://en.wikipedia.org/wiki/Sulfur",
 					"electrons": [
 						2,
 						8,
@@ -216,6 +232,7 @@
 					"number": 17,
 					"small": "Cl",
 					"molar": 35.453,
+                    "wiki": "https://en.wikipedia.org/wiki/Chlorine",
 					"electrons": [
 						2,
 						8,
@@ -229,6 +246,7 @@
 					"number": 18,
 					"small": "Ar",
 					"molar": 39.948,
+                    "wiki": "https://en.wikipedia.org/wiki/Argon",
 					"electrons": [
 						2,
 						8,
@@ -247,6 +265,7 @@
 					"number": 19,
 					"small": "K",
 					"molar": 39.0983,
+                    "wiki": "https://en.wikipedia.org/wiki/Potassium",
 					"electrons": [
 						2,
 						8,
@@ -261,6 +280,7 @@
 					"number": 20,
 					"small": "Ca",
 					"molar": 40.078,
+                    "wiki": "https://en.wikipedia.org/wiki/Calcium",
 					"electrons": [
 						2,
 						8,
@@ -275,6 +295,7 @@
 					"number": 21,
 					"small": "Sc",
 					"molar": 44.955914,
+                    "wiki": "https://en.wikipedia.org/wiki/Scandium",
 					"electrons": [
 						2,
 						8,
@@ -289,6 +310,7 @@
 					"number": 22,
 					"small": "Ti",
 					"molar": 47.867,
+                    "wiki": "https://en.wikipedia.org/wiki/Titanium",
 					"electrons": [
 						2,
 						8,
@@ -303,6 +325,7 @@
 					"number": 23,
 					"small": "V",
 					"molar": 50.9415,
+                    "wiki": "https://en.wikipedia.org/wiki/Vanadium",
 					"electrons": [
 						2,
 						8,
@@ -317,6 +340,7 @@
 					"number": 24,
 					"small": "Cr",
 					"molar": 51.9961,
+                    "wiki": "https://en.wikipedia.org/wiki/Chromium",
 					"electrons": [
 						2,
 						8,
@@ -331,6 +355,7 @@
 					"number": 25,
 					"small": "Mn",
 					"molar": 54.938046,
+                    "wiki": "https://en.wikipedia.org/wiki/Manganese",
 					"electrons": [
 						2,
 						8,
@@ -345,6 +370,7 @@
 					"number": 26,
 					"small": "Fe",
 					"molar": 55.845,
+                    "wiki": "https://en.wikipedia.org/wiki/Iron",
 					"electrons": [
 						2,
 						8,
@@ -359,6 +385,7 @@
 					"number": 27,
 					"small": "Co",
 					"molar": 58.933193,
+                    "wiki": "https://en.wikipedia.org/wiki/Cobalt",
 					"electrons": [
 						2,
 						8,
@@ -373,6 +400,7 @@
 					"number": 28,
 					"small": "Ni",
 					"molar": 58.6934,
+                    "wiki": "https://en.wikipedia.org/wiki/Nickel",
 					"electrons": [
 						2,
 						8,
@@ -387,6 +415,7 @@
 					"number": 29,
 					"small": "Cu",
 					"molar": 63.546,
+                    "wiki": "https://en.wikipedia.org/wiki/Copper",
 					"electrons": [
 						2,
 						8,
@@ -401,6 +430,7 @@
 					"number": 30,
 					"small": "Zn",
 					"molar": 65.38,
+                    "wiki": "https://en.wikipedia.org/wiki/Zinc",
 					"electrons": [
 						2,
 						8,
@@ -415,6 +445,7 @@
 					"number": 31,
 					"small": "Ga",
 					"molar": 69.723,
+                    "wiki": "https://en.wikipedia.org/wiki/Gallium",
 					"electrons": [
 						2,
 						8,
@@ -429,6 +460,7 @@
 					"number": 32,
 					"small": "Ge",
 					"molar": 72.63,
+                    "wiki": "https://en.wikipedia.org/wiki/Germanium",
 					"electrons": [
 						2,
 						8,
@@ -443,6 +475,7 @@
 					"number": 33,
 					"small": "As",
 					"molar": 74.9216,
+                    "wiki": "https://en.wikipedia.org/wiki/Arsenic",
 					"electrons": [
 						2,
 						8,
@@ -457,6 +490,7 @@
 					"number": 34,
 					"small": "Se",
 					"molar": 78.96,
+                    "wiki": "https://en.wikipedia.org/wiki/Selenium",
 					"electrons": [
 						2,
 						8,
@@ -471,6 +505,7 @@
 					"number": 35,
 					"small": "Br",
 					"molar": 79.904,
+                    "wiki": "https://en.wikipedia.org/wiki/Bromine",
 					"electrons": [
 						2,
 						8,
@@ -485,6 +520,7 @@
 					"number": 36,
 					"small": "Kr",
 					"molar": 83.798,
+                    "wiki": "https://en.wikipedia.org/wiki/Krypton",
 					"electrons": [
 						2,
 						8,
@@ -504,6 +540,7 @@
 					"number": 37,
 					"small": "Rb",
 					"molar": 85.4678,
+                    "wiki": "https://en.wikipedia.org/wiki/Rubidium",
 					"electrons": [
 						2,
 						8,
@@ -519,6 +556,7 @@
 					"number": 38,
 					"small": "Sr",
 					"molar": 87.62,
+                    "wiki": "https://en.wikipedia.org/wiki/Strontium",
 					"electrons": [
 						2,
 						8,
@@ -534,6 +572,7 @@
 					"number": 39,
 					"small": "Y",
 					"molar": 88.90585,
+                    "wiki": "https://en.wikipedia.org/wiki/Yttrium",
 					"electrons": [
 						2,
 						8,
@@ -549,6 +588,7 @@
 					"number": 40,
 					"small": "Zr",
 					"molar": 91.224,
+                    "wiki": "https://en.wikipedia.org/wiki/Zirconium",
 					"electrons": [
 						2,
 						8,
@@ -564,6 +604,7 @@
 					"number": 41,
 					"small": "Nb",
 					"molar": 92.90638,
+                    "wiki": "https://en.wikipedia.org/wiki/Niobium",
 					"electrons": [
 						2,
 						8,
@@ -579,6 +620,7 @@
 					"number": 42,
 					"small": "Mo",
 					"molar": 95.96,
+                    "wiki": "https://en.wikipedia.org/wiki/Molybdenum",
 					"electrons": [
 						2,
 						8,
@@ -594,6 +636,7 @@
 					"number": 43,
 					"small": "Tc",
 					"molar": 98,
+                    "wiki": "https://en.wikipedia.org/wiki/Technetium",
 					"electrons": [
 						2,
 						8,
@@ -609,6 +652,7 @@
 					"number": 44,
 					"small": "Ru",
 					"molar": 101.07,
+                    "wiki": "https://en.wikipedia.org/wiki/Ruthenium",
 					"electrons": [
 						2,
 						8,
@@ -624,6 +668,7 @@
 					"number": 45,
 					"small": "Rh",
 					"molar": 102.9055,
+                    "wiki": "https://en.wikipedia.org/wiki/Rhodium",
 					"electrons": [
 						2,
 						8,
@@ -639,6 +684,7 @@
 					"number": 46,
 					"small": "Pd",
 					"molar": 106.42,
+                    "wiki": "https://en.wikipedia.org/wiki/Palladium",
 					"electrons": [
 						2,
 						8,
@@ -653,6 +699,7 @@
 					"number": 47,
 					"small": "Ag",
 					"molar": 107.8682,
+                    "wiki": "https://en.wikipedia.org/wiki/Silver",
 					"electrons": [
 						2,
 						8,
@@ -668,6 +715,7 @@
 					"number": 48,
 					"small": "Cd",
 					"molar": 112.411,
+                    "wiki": "https://en.wikipedia.org/wiki/Cadmium",
 					"electrons": [
 						2,
 						8,
@@ -683,6 +731,7 @@
 					"number": 49,
 					"small": "In",
 					"molar": 114.818,
+                    "wiki": "https://en.wikipedia.org/wiki/Indium",
 					"electrons": [
 						2,
 						8,
@@ -698,6 +747,7 @@
 					"number": 50,
 					"small": "Sn",
 					"molar": 118.71,
+                    "wiki": "https://en.wikipedia.org/wiki/Tin",
 					"electrons": [
 						2,
 						8,
@@ -713,6 +763,7 @@
 					"number": 51,
 					"small": "Sb",
 					"molar": 121.76,
+                    "wiki": "https://en.wikipedia.org/wiki/Antimony",
 					"electrons": [
 						2,
 						8,
@@ -728,6 +779,7 @@
 					"number": 52,
 					"small": "Te",
 					"molar": 127.6,
+                    "wiki": "https://en.wikipedia.org/wiki/Tellurium",
 					"electrons": [
 						2,
 						8,
@@ -743,6 +795,7 @@
 					"number": 53,
 					"small": "I",
 					"molar": 126.90447,
+                    "wiki": "https://en.wikipedia.org/wiki/Iodine",
 					"electrons": [
 						2,
 						8,
@@ -758,6 +811,7 @@
 					"number": 54,
 					"small": "Xe",
 					"molar": 131.293,
+                    "wiki": "https://en.wikipedia.org/wiki/Xenon",
 					"electrons": [
 						2,
 						8,
@@ -778,6 +832,7 @@
 					"number": 55,
 					"small": "Cs",
 					"molar": 132.90546,
+                    "wiki": "https://en.wikipedia.org/wiki/Caesium",
 					"electrons": [
 						2,
 						8,
@@ -794,6 +849,7 @@
 					"number": 56,
 					"small": "Ba",
 					"molar": 137.327,
+                    "wiki": "https://en.wikipedia.org/wiki/Barium",
 					"electrons": [
 						2,
 						8,
@@ -810,6 +866,7 @@
         			"number": 57,
         			"small": "La",
         			"molar": 138.90547,
+                    "wiki": "https://en.wikipedia.org/wiki/Lanthanum",
         			"electrons": [
         				2,
         				8,
@@ -826,6 +883,7 @@
         			"number": 58,
         			"small": "Ce",
         			"molar": 140.116,
+                    "wiki": "https://en.wikipedia.org/wiki/Cerium",
         			"electrons": [
         				2,
         				8,
@@ -842,6 +900,7 @@
         			"number": 59,
         			"small": "Pr",
         			"molar": 140.90765,
+                    "wiki": "https://en.wikipedia.org/wiki/Praseodymium",
         			"electrons": [
         				2,
         				8,
@@ -858,6 +917,7 @@
         			"number": 60,
         			"small": "Nd",
         			"molar": 144.242,
+                    "wiki": "https://en.wikipedia.org/wiki/Neodymium",
         			"electrons": [
         				2,
         				8,
@@ -874,6 +934,7 @@
         			"number": 61,
         			"small": "Pm",
         			"molar": 145,
+                    "wiki": "https://en.wikipedia.org/wiki/Promethium",
         			"electrons": [
         				2,
         				8,
@@ -890,6 +951,7 @@
         			"number": 62,
         			"small": "Sm",
         			"molar": 150.36,
+                    "wiki": "https://en.wikipedia.org/wiki/Samarium",
         			"electrons": [
         				2,
         				8,
@@ -906,6 +968,7 @@
         			"number": 63,
         			"small": "Eu",
         			"molar": 151.964,
+                    "wiki": "https://en.wikipedia.org/wiki/Europium",
         			"electrons": [
         				2,
         				8,
@@ -922,6 +985,7 @@
         			"number": 64,
         			"small": "Gd",
         			"molar": 157.25,
+                    "wiki": "https://en.wikipedia.org/wiki/Gadolinium",
         			"electrons": [
         				2,
         				8,
@@ -938,6 +1002,7 @@
         			"number": 65,
         			"small": "Tb",
         			"molar": 158.92535,
+                    "wiki": "https://en.wikipedia.org/wiki/Terbium",
         			"electrons": [
         				2,
         				8,
@@ -954,6 +1019,7 @@
         			"number": 66,
         			"small": "Dy",
         			"molar": 162.5,
+                    "wiki": "https://en.wikipedia.org/wiki/Dysprosium",
         			"electrons": [
         				2,
         				8,
@@ -970,6 +1036,7 @@
         			"number": 67,
         			"small": "Ho",
         			"molar": 164.93031,
+                    "wiki": "https://en.wikipedia.org/wiki/Holmium",
         			"electrons": [
         				2,
         				8,
@@ -986,6 +1053,7 @@
         			"number": 68,
         			"small": "Er",
         			"molar": 167.259,
+                    "wiki": "https://en.wikipedia.org/wiki/Erbium",
         			"electrons": [
         				2,
         				8,
@@ -1002,6 +1070,7 @@
         			"number": 69,
         			"small": "Tm",
         			"molar": 168.9342,
+                    "wiki": "https://en.wikipedia.org/wiki/Thulium",
         			"electrons": [
         				2,
         				8,
@@ -1018,6 +1087,7 @@
         			"number": 70,
         			"small": "Yb",
         			"molar": 173.054,
+                    "wiki": "https://en.wikipedia.org/wiki/Ytterbium",
         			"electrons": [
         				2,
         				8,
@@ -1034,6 +1104,7 @@
         			"number": 71,
         			"small": "Lu",
         			"molar": 174.9668,
+                    "wiki": "https://en.wikipedia.org/wiki/Lutetium",
         			"electrons": [
         				2,
         				8,
@@ -1050,6 +1121,7 @@
 					"number": 72,
 					"small": "Hf",
 					"molar": 178.49,
+                    "wiki": "https://en.wikipedia.org/wiki/Hafnium",
 					"electrons": [
 						2,
 						8,
@@ -1066,6 +1138,7 @@
 					"number": 73,
 					"small": "Ta",
 					"molar": 180.94788,
+                    "wiki": "https://en.wikipedia.org/wiki/Tantalum",
 					"electrons": [
 						2,
 						8,
@@ -1082,6 +1155,7 @@
 					"number": 74,
 					"small": "W",
 					"molar": 183.84,
+                    "wiki": "https://en.wikipedia.org/wiki/Tungsten",
 					"electrons": [
 						2,
 						8,
@@ -1098,6 +1172,7 @@
 					"number": 75,
 					"small": "Re",
 					"molar": 186.207,
+                    "wiki": "https://en.wikipedia.org/wiki/Rhenium",
 					"electrons": [
 						2,
 						8,
@@ -1114,6 +1189,7 @@
 					"number": 76,
 					"small": "Os",
 					"molar": 190.23,
+                    "wiki": "https://en.wikipedia.org/wiki/Osmium",
 					"electrons": [
 						2,
 						8,
@@ -1130,6 +1206,7 @@
 					"number": 77,
 					"small": "Ir",
 					"molar": 192.217,
+                    "wiki": "https://en.wikipedia.org/wiki/Iridium",
 					"electrons": [
 						2,
 						8,
@@ -1146,6 +1223,7 @@
 					"number": 78,
 					"small": "Pt",
 					"molar": 195.084,
+                    "wiki": "https://en.wikipedia.org/wiki/Platinum",
 					"electrons": [
 						2,
 						8,
@@ -1162,6 +1240,7 @@
 					"number": 79,
 					"small": "Au",
 					"molar": 196.96657,
+                    "wiki": "https://en.wikipedia.org/wiki/Gold",
 					"electrons": [
 						2,
 						8,
@@ -1178,6 +1257,7 @@
 					"number": 80,
 					"small": "Hg",
 					"molar": 200.59,
+                    "wiki": "https://en.wikipedia.org/wiki/Mercury",
 					"electrons": [
 						2,
 						8,
@@ -1194,6 +1274,7 @@
 					"number": 81,
 					"small": "Tl",
 					"molar": 204.3833,
+                    "wiki": "https://en.wikipedia.org/wiki/Thallium",
 					"electrons": [
 						2,
 						8,
@@ -1210,6 +1291,7 @@
 					"number": 82,
 					"small": "Pb",
 					"molar": 207.2,
+                    "wiki": "https://en.wikipedia.org/wiki/Lead",
 					"electrons": [
 						2,
 						8,
@@ -1226,6 +1308,7 @@
 					"number": 83,
 					"small": "Bi",
 					"molar": 208.9804,
+                    "wiki": "https://en.wikipedia.org/wiki/Bismuth",
 					"electrons": [
 						2,
 						8,
@@ -1242,6 +1325,7 @@
 					"number": 84,
 					"small": "Po",
 					"molar": 209,
+                    "wiki": "https://en.wikipedia.org/wiki/Polonium",
 					"electrons": [
 						2,
 						8,
@@ -1258,6 +1342,7 @@
 					"number": 85,
 					"small": "At",
 					"molar": 210,
+                    "wiki": "https://en.wikipedia.org/wiki/Astatine",
 					"electrons": [
 						2,
 						8,
@@ -1274,6 +1359,7 @@
 					"number": 86,
 					"small": "Rn",
 					"molar": 222,
+                    "wiki": "https://en.wikipedia.org/wiki/Radon",
 					"electrons": [
 						2,
 						8,
@@ -1295,6 +1381,7 @@
 					"number": 87,
 					"small": "Fr",
 					"molar": 223,
+                    "wiki": "https://en.wikipedia.org/wiki/Francium",
 					"electrons": [
 						2,
 						8,
@@ -1312,6 +1399,7 @@
 					"number": 88,
 					"small": "Ra",
 					"molar": 226,
+                    "wiki": "https://en.wikipedia.org/wiki/Radium",
 					"electrons": [
 						2,
 						8,
@@ -1329,6 +1417,7 @@
         			"number": 89,
         			"small": "Ac",
         			"molar": 227,
+                    "wiki": "https://en.wikipedia.org/wiki/Actinium",
         			"electrons": [
         				2,
         				8,
@@ -1345,6 +1434,7 @@
         			"name": "Thorium",
         			"number": 90,
         			"small": "Th",
+                    "wiki": "https://en.wikipedia.org/wiki/Thorium",
         			"molar": 232.03806,
         			"electrons": [
         				2,
@@ -1363,6 +1453,7 @@
         			"number": 91,
         			"small": "Pa",
         			"molar": 231.03587,
+                    "wiki": "https://en.wikipedia.org/wiki/Protactinium",
         			"electrons": [
         				2,
         				8,
@@ -1380,6 +1471,7 @@
         			"number": 92,
         			"small": "U",
         			"molar": 238.02892,
+                    "wiki": "https://en.wikipedia.org/wiki/Uranium",
         			"electrons": [
         				2,
         				8,
@@ -1397,6 +1489,7 @@
         			"number": 93,
         			"small": "Np",
         			"molar": 237,
+                    "wiki": "https://en.wikipedia.org/wiki/Neptunium",
         			"electrons": [
         				2,
         				8,
@@ -1414,6 +1507,7 @@
         			"number": 94,
         			"small": "Pu",
         			"molar": 244,
+                    "wiki": "https://en.wikipedia.org/wiki/Plutonium",
         			"electrons": [
         				2,
         				8,
@@ -1431,6 +1525,7 @@
         			"number": 95,
         			"small": "Am",
         			"molar": 243,
+                    "wiki": "https://en.wikipedia.org/wiki/Americium",
         			"electrons": [
         				2,
         				8,
@@ -1448,6 +1543,7 @@
         			"number": 96,
         			"small": "Cm",
         			"molar": 247,
+                    "wiki": "https://en.wikipedia.org/wiki/Curium",
         			"electrons": [
         				2,
         				8,
@@ -1465,6 +1561,7 @@
         			"number": 97,
         			"small": "Bk",
         			"molar": 247,
+                    "wiki": "https://en.wikipedia.org/wiki/Berkelium",
         			"electrons": [
         				2,
         				8,
@@ -1482,6 +1579,7 @@
         			"number": 98,
         			"small": "Cf",
         			"molar": 251,
+                    "wiki": "https://en.wikipedia.org/wiki/Californium",
         			"electrons": [
         				2,
         				8,
@@ -1499,6 +1597,7 @@
         			"number": 99,
         			"small": "Es",
         			"molar": 252,
+                    "wiki": "https://en.wikipedia.org/wiki/Einsteinium",
         			"electrons": [
         				2,
         				8,
@@ -1516,6 +1615,7 @@
         			"number": 100,
         			"small": "Fm",
         			"molar": 257,
+                    "wiki": "https://en.wikipedia.org/wiki/Fermium",
         			"electrons": [
         				2,
         				8,
@@ -1533,6 +1633,7 @@
         			"number": 101,
         			"small": "Md",
         			"molar": 258,
+                    "wiki": "https://en.wikipedia.org/wiki/Mendelevium",
         			"electrons": [
         				2,
         				8,
@@ -1550,6 +1651,7 @@
         			"number": 102,
         			"small": "No",
         			"molar": 259,
+                    "wiki": "https://en.wikipedia.org/wiki/Nobelium",
         			"electrons": [
         				2,
         				8,
@@ -1567,6 +1669,7 @@
         			"number": 103,
         			"small": "Lr",
         			"molar": 262,
+                    "wiki": "https://en.wikipedia.org/wiki/Lawrencium",
         			"electrons": [
         				2,
         				8,
@@ -1584,6 +1687,7 @@
 					"number": 104,
 					"small": "Rf",
 					"molar": 267,
+                    "wiki": "https://en.wikipedia.org/wiki/Rutherfordium",
 					"electrons": [
 						2,
 						8,
@@ -1601,6 +1705,7 @@
 					"number": 105,
 					"small": "Db",
 					"molar": 268,
+                    "wiki": "https://en.wikipedia.org/wiki/Dubnium",
 					"electrons": [
 						2,
 						8,
@@ -1618,6 +1723,7 @@
 					"number": 106,
 					"small": "Sg",
 					"molar": 271,
+                    "wiki": "https://en.wikipedia.org/wiki/Seaborgium",
 					"electrons": [
 						2,
 						8,
@@ -1635,6 +1741,7 @@
 					"number": 107,
 					"small": "Bh",
 					"molar": 272,
+                    "wiki": "https://en.wikipedia.org/wiki/Bohrium",
 					"electrons": [
 						2,
 						8,
@@ -1652,6 +1759,7 @@
 					"number": 108,
 					"small": "Hs",
 					"molar": 270,
+                    "wiki": "https://en.wikipedia.org/wiki/Hassium",
 					"electrons": [
 						2,
 						8,
@@ -1669,6 +1777,7 @@
 					"number": 109,
 					"small": "Mt",
 					"molar": 276,
+                    "wiki": "https://en.wikipedia.org/wiki/Meitnerium",
 					"electrons": [
 						2,
 						8,
@@ -1686,6 +1795,7 @@
 					"number": 110,
 					"small": "Ds",
 					"molar": 281,
+                    "wiki": "https://en.wikipedia.org/wiki/Darmstadtium",
 					"electrons": [
 						2,
 						8,
@@ -1703,6 +1813,7 @@
 					"number": 111,
 					"small": "Rg",
 					"molar": 280,
+                    "wiki": "https://en.wikipedia.org/wiki/Roentgenium",
 					"electrons": [
 						2,
 						8,
@@ -1720,6 +1831,7 @@
 					"number": 112,
 					"small": "Cn",
 					"molar": 285,
+                    "wiki": "https://en.wikipedia.org/wiki/Copernicium",
 					"electrons": [
 						2,
 						8,
@@ -1737,6 +1849,7 @@
 					"number": 113,
 					"small": "Nh",
 					"molar": 284,
+                    "wiki": "https://en.wikipedia.org/wiki/Nihonium",
 					"electrons": [
 						2,
 						8,
@@ -1754,6 +1867,7 @@
 					"number": 114,
 					"small": "Fl",
 					"molar": 289,
+                    "wiki": "https://en.wikipedia.org/wiki/Flerovium",
 					"electrons": [
 						2,
 						8,
@@ -1771,6 +1885,7 @@
 					"number": 115,
 					"small": "Mc",
 					"molar": 288,
+                    "wiki": "https://en.wikipedia.org/wiki/Moscovium",
 					"electrons": [
 						2,
 						8,
@@ -1788,6 +1903,7 @@
 					"number": 116,
 					"small": "Lv",
 					"molar": 293,
+                    "wiki": "https://en.wikipedia.org/wiki/Livermorium",
 					"electrons": [
 						2,
 						8,
@@ -1805,6 +1921,7 @@
 					"number": 117,
 					"small": "Ts",
 					"molar": 294,
+                    "wiki": "https://en.wikipedia.org/wiki/Tennessine",
 					"electrons": [
 						2,
 						8,
@@ -1822,6 +1939,7 @@
 					"number": 118,
 					"small": "Og",
 					"molar": 294,
+                    "wiki": "https://en.wikipedia.org/wiki/Oganesson",
 					"electrons": [
 						2,
 						8,

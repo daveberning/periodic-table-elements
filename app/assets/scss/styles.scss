@@ -25,6 +25,11 @@ body {
     }
 }
 
+p.disabled,
+p.disabled .lnr  {
+    color: darken(white, 50%);
+}
+
 .btn {
     background: none;
     border: 1px solid #fff;

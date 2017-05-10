@@ -17,7 +17,7 @@
             </ul>
         </div>
 
-        <a href="#" class="btn btn-primary more-info">More on {{element.name}} <span class="lnr lnr-chevron-right"></span></a>
+        <a href="{{element.wiki}}" ng-disabled="!element.wiki.length" class="btn btn-primary more-info" target="_blank">More on {{element.name}} <span class="lnr lnr-chevron-right"></span></a>
 
         <br>
 
@@ -36,10 +36,12 @@
     <div class="col-sm-3">
         <div class="row">
             <div class="col-sm-6">
-                <p ng-click="previous()" ng-disabled="elementIndex == 1" class="pointer"><span class="lnr lnr-chevron-left"></span> Previous</p>
+                <p ng-show="elementIndex == 0" class="pointer disabled"><span class="lnr lnr-chevron-left"></span> Previous</p>
+                <p ng-click="previous()" ng-hide="elementIndex == 0" class="pointer"><span class="lnr lnr-chevron-left"></span> Previous</p>
             </div>
             <div class="col-sm-6">
-                <p ng-click="next()" class="pointer">Next <span class="lnr lnr-chevron-right"></span></p>
+                <p ng-click="next()" ng-hide="elementIndex == 117" class="pointer">Next <span class="lnr lnr-chevron-right"></span></p>
+                <p ng-show="elementIndex == 117" class="pointer disabled">Next <span class="lnr lnr-chevron-right"></span></p>
             </div>
         </div>
     </div>

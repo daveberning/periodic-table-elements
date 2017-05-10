@@ -16,8 +16,6 @@ periodicTable.controller('tableController', function($scope, elementsFactory) {
         $scope.elements = elementsArr;
         $scope.elementIndex = 0;
 
-        console.log($scope.elements[5]);
-
         // Navigation
         $scope.previous = function () {
             if ($scope.elementIndex >= $scope.elements) {
@@ -38,7 +36,6 @@ periodicTable.controller('tableController', function($scope, elementsFactory) {
 });
 
 periodicTable.filter('range', function() {
-console.log("hi");
   return function(val, range) {
     range = parseInt(range);
     for (var i=0; i<range; i++)
