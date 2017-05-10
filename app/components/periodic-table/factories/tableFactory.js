@@ -9,3 +9,15 @@ periodicTable.factory('elementsFactory', function($http) {
 
     return factory;
 });
+
+
+periodicTable.factory('wikiService', function($http) {
+
+    var wikiService = {
+        get: function(element) {
+            return $http.jsonp('https://en.wikipedia.org/w/api.php?action=query&titles=' + element.name + '&rawcontinue=true&action=query&format=json&prop=extracts');
+        }
+    };
+
+    return wikiService;
+});

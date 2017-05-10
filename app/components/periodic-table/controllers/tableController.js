@@ -1,6 +1,6 @@
 var periodicTable = angular.module("periodicTableOfElements");
 
-periodicTable.controller('tableController', function($scope, elementsFactory) {
+periodicTable.controller('tableController', function($scope, elementsFactory, wikiService) {
     elementsFactory.getItems().then(function(response){
         $scope.items = response.data;
         var elementsArr = []; // every element
@@ -32,6 +32,11 @@ periodicTable.controller('tableController', function($scope, elementsFactory) {
                 $scope.elementIndex++;
             }
         };
+    });
+
+    wikiService.get({name: 'Hydrogen'}).then(function(data) {
+        console.log(data);
+        $scope.wikiData = data.data;
     });
 });
 
